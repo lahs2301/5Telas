@@ -7,15 +7,12 @@ export default function Iniciar(){
     return(
         <View style={styles.container}> 
            <View style={styles.containerHeader}>
-                <Text style={styles.texto}>Bem Vindo</Text>
+                <Text style={styles.texto}>ERRADO</Text>
            </View>
-            <View style={styles.containerImage}>
-                <Image style={styles.indoALI} source={require('../../assets/indoALI2.jpeg')}/> 
-            </View>
             <View style={styles.containerForm}>
-                <TouchableOpacity onPress={()=>navigation.navigate("Errado")} style={styles.corFundo}>
+                <TouchableOpacity style={styles.corFundo}>
                     <Text style={styles.botao}>
-                        Iniciar
+                        Próximo
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -25,24 +22,24 @@ export default function Iniciar(){
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#EBD01B",
+        backgroundColor: "#F50501",
     },
     indoALI:{
         alignSelf: "center",
         borderRadius: 50
     },
     containerHeader:{
-        height: "33%",
-    },
-    containerImage:{
-        height: "33%"
+        height: "75%",
+        justifyContent: "center"
     },
     containerForm:{
-        height: "33%"
+        height: "25%"
+
     },
     texto:{
-        fontSize: 50,
+        fontSize: 100,
         textAlign: "center", 
+        fontWeight: "bold"
     },
     botao:{
         fontSize: 30,

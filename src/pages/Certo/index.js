@@ -10,7 +10,7 @@ export default function Iniciar(){
                 <Text style={styles.texto}>CERTO</Text>
            </View>
             <View style={styles.containerForm}>
-                <TouchableOpacity style={styles.corFundo}>
+                <TouchableOpacity onPress={()=>navigation.navigate("IndoAonde")} style={styles.corFundo}>
                     <Text style={styles.botao}>
                         Próximo
                     </Text>

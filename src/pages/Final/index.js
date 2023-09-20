@@ -1,29 +1,36 @@
 import { StatusBar } from "react";
 import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native"
 import { useNavigation } from "@react-navigation/native";
+import { Animation } from "react-native-animatable";
 
 export default function Iniciar(){
     const navigation = useNavigation()
     return(
         <View style={styles.container}> 
            <View style={styles.containerHeader}>
-                <Text  style={styles.texto}>ERRADO</Text>
-           </View>
-            
+                <Text  style={styles.texto}>PARABÉNS
+                VOCÊ
+                CONSEGUIU!</Text>
+                <View style={styles.containerImage}>
+                <Image style={styles.IndoALI} source={require('../../assets/indoALI2.jpeg')}/> 
+            </View> 
             <TouchableOpacity onPress={()=>navigation.navigate("Iniciar")} style={styles.corFundo}>
                     <Text style={styles.botao}>
                         REINICIAR
                     </Text>
-                </TouchableOpacity>
+                </TouchableOpacity>  
+           </View>
+            <View style={styles.containerForm}>
+            </View>
         </View>
     )
 }
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#F50501",
+        backgroundColor: "#B0E0E6",
     },
-    indoALI:{
+    IndoALI:{
         alignSelf: "center",
         borderRadius: 50
     },
@@ -36,7 +43,7 @@ const styles = StyleSheet.create({
 
     },
     texto:{
-        fontSize: 100,
+        fontSize: 60,
         textAlign: "center", 
         fontWeight: "bold"
     },
@@ -49,5 +56,6 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         width: "40%",
         alignSelf: "center",
-    },       
+        marginTop: "auto",
+    }
 }) 

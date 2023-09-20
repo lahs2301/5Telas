@@ -7,7 +7,7 @@ export default function Iniciar(){
     return(
         <View style={styles.container}> 
            <View style={styles.containerHeader}>
-                <Text onPress={()=>navigation.navigate("Certo")} style={styles.texto}>ERRADO</Text>
+                <Text style={styles.texto}>CERTO</Text>
            </View>
             <View style={styles.containerForm}>
                 <TouchableOpacity style={styles.corFundo}>
@@ -22,7 +22,7 @@ export default function Iniciar(){
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: "#F50501",
+        backgroundColor: "#04F501",
     },
     indoALI:{
         alignSelf: "center",
